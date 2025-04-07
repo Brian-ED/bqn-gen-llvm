@@ -1,6 +1,9 @@
-# outputs of compiling helloworld.ll
+# outputs of compiling
 helloworld
 a.out
+normal.out
+proper.out
+test.ll
 
 # editor config
 .vscode

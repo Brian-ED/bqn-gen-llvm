@@ -2,9 +2,11 @@ outputFile ← "helloworld.ll"⊣´•args
 
 str ← "Hello, World!"
 
-outputFile •FLines ⟨
+o ← ⟨
+    "target triple = ""x86_64-unknown-linux-gnu""" # Literally just for avoiding a warning?
     "@str = constant ["∾(•Repr 1+≠str)∾" x i8] c"""∾str∾"\00"""
     ""
+    # Get the libc puts function declaration.
     "declare i32 @puts(ptr)"
     ""
     "define i32 @main() {"
@@ -12,3 +14,5 @@ outputFile •FLines ⟨
     "  ret i32 0"
     "}"
 ⟩
+
+outputFile •FLines o
