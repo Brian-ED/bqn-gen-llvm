@@ -1,5 +1,9 @@
 outputFile ← "helloworld.ll"⊣´•args
 
+# Pointers are safe if they're inside some range.
+# I want to prove this range. If i can't, the programmer will. by adding asserts.
+# I want this to be just as arbitrary as any other rule.
+
 str ← "Hello, World!"
 
 o ← ⟨
